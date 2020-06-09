@@ -1,4 +1,5 @@
 rootProject.name = 'Pers_Evolution-Simulation-Bacteria'
 include 'Simulation'
 include 'Chemotaxis'
+include 'Chemotaxis'
 
