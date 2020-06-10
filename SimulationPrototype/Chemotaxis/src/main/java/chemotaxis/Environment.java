@@ -1,28 +1,26 @@
 package chemotaxis;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Environment {
 
     private List<Bacteria> bacteriaList;
-    private DomainWritable domain;
+    private DomainReadable domain;
     private final int size = 100;
     private PositionVector bacteriaPosition = new PositionVector(50,50);
     private int bacteriaSpeed = 5;
-    private double chanceToTumbel = 0.5;
+    private double chanceToTumble = 0.5;
 
-    public Environment(int size) {
-        domain = new DomainWritable();
-        initDomain();
+    public Environment() {
+        System.out.println("--- INIT Environment");
+        domain = new DomainReadable(size);
+        bacteriaList = new ArrayList<>();
         initBacteria();
     }
 
-    private void initDomain() {
-
-    }
-
     private void initBacteria() {
-        bacteriaList.add(new Bacteria(bacteriaPosition, bacteriaSpeed, chanceToTumbel));
+        bacteriaList.add(new Bacteria(bacteriaPosition, bacteriaSpeed, chanceToTumble));
     }
 
     public void progressEnvironment() {

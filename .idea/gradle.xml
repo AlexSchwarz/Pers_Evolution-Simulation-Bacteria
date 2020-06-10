@@ -8,8 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Chemotaxis" />
-            <option value="$PROJECT_DIR$/Simulation" />
+            <option value="$PROJECT_DIR$/SimulationPrototype/Chemotaxis" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
