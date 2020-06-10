@@ -5,7 +5,7 @@ import java.util.Random;
 public class Bacteria {
 
     private PositionVector position;
-    private PositionVector direction;
+    private PositionVector moveVector;
     private int speed;
     private double chanceToTumble;
     private int previousConcentration;
@@ -17,7 +17,7 @@ public class Bacteria {
         this.speed = speed;
         this.chanceToTumble = chanceToTumble;
         previousConcentration = 0;
-        direction = new PositionVector();
+        moveVector = new PositionVector();
     }
 
     public PositionVector getPosition() {
@@ -28,12 +28,20 @@ public class Bacteria {
         position = nextPosition;
     }
 
-    public PositionVector getDirection() {
-        return direction;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setDirection(PositionVector direction) {
-        this.direction = direction;
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public PositionVector getDirection() {
+        return moveVector;
+    }
+
+    public void setDirection(PositionVector moveVector) {
+        this.moveVector = moveVector;
     }
 
     //todo: incorporate chanceToTumble and have if-else statement apply modifier

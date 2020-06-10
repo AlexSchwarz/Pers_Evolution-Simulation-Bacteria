@@ -20,6 +20,10 @@ public class DomainReadable {
         }
     }
 
+    public boolean isPositionInDomain(PositionVector position) {
+        return position.getX() < size && position.getY() < size;
+    }
+
     public int getConcentration(PositionVector positionVector) {
         return domainArray[positionVector.getY()][positionVector.getX()];
     }
